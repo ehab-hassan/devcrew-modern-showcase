@@ -6,17 +6,17 @@ const Services = () => {
     {
       icon: <Settings className="w-8 h-8 text-primary" />,
       title: "Managed Services",
-      description: "End-to-end IT operations support to keep your business running smoothly."
+      description: "We handle the day-to-day operations of your IT infrastructure, so you can focus on growing your business. From system monitoring and security to updates and troubleshooting, our team ensures everything runs seamlessly and reliably around the clock."
     },
     {
       icon: <Users className="w-8 h-8 text-primary" />,
       title: "Assigned Team",
-      description: "Dedicated developers working as an extension of your in-house team."
+      description: "Scale your development capacity with a dedicated team tailored to your needs. Our skilled professionals integrate with your in-house workflows, bringing specialized expertise and flexible support to accelerate delivery without the overhead of hiring full-time staff."
     },
     {
       icon: <Rocket className="w-8 h-8 text-primary" />,
       title: "Full Projects",
-      description: "Complete software solutions delivered from idea to launch."
+      description: "Have an idea but need end-to-end execution? We take your concept from planning to production. From strategy and design to coding, testing, and deployment, we deliver complete, high-quality solutions that meet your goals and delight your users."
     }
   ];
 

@@ -5,17 +5,17 @@ const Values = () => {
     {
       icon: <CheckCircle className="w-10 h-10 text-accent" />,
       title: "Commitments",
-      description: "We deliver on time and exceed client expectations every step of the way."
+      description: "We don’t just meet deadlines — we honor our promises. Our team is dedicated to delivering projects on time, with quality that consistently exceeds expectations. Every milestone is treated with care, ensuring reliability you can trust."
     },
     {
       icon: <Shield className="w-10 h-10 text-accent" />,
       title: "Integrity",
-      description: "Honesty and transparency guide all our partnerships and projects."
+      description: "We believe in building relationships on a foundation of honesty and transparency. From clear communication to ethical practices, integrity shapes the way we work with clients, partners, and team members alike."
     },
     {
       icon: <Lightbulb className="w-10 h-10 text-accent" />,
       title: "Innovation",
-      description: "We leverage modern technologies to create forward-thinking solutions."
+      description: "Technology moves fast, and so do we. By embracing modern tools and fresh ideas, we craft solutions that aren’t just relevant today, but ready for the future. Innovation is at the core of everything we create."
     }
   ];
 
