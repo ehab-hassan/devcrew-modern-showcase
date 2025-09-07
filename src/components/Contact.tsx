@@ -50,7 +50,7 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-              Let's <span className="gradient-primary bg-clip-text text-transparent">Connect</span>
+              Let's <span className="bg-clip-text">Connect</span>
             </h2>
             <p className="text-xl text-muted-foreground animate-slide-up animation-delay-200">
               Ready to start your next project? Let's build something great together.

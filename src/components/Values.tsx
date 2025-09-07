@@ -24,7 +24,7 @@ const Values = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            Our <span className="gradient-primary bg-clip-text text-transparent">Values</span>
+            Our <span className="bg-clip-text">Values</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up animation-delay-200">
             These core principles drive everything we do and shape our approach to every project.
