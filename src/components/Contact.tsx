@@ -65,8 +65,8 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
+              <form onSubmit={handleSubmit} className="space-y-6 animate-slide-up animation-delay-600">
+                <div className="space-y-2 animate-fade-in animation-delay-800">
                   <Label htmlFor="name">Name</Label>
                   <Input
                     id="name"
@@ -75,11 +75,11 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your full name"
-                    className="transition-all duration-300 focus:shadow-soft"
+                    className="transition-all duration-300 focus:shadow-soft hover:scale-[1.01]"
                   />
                 </div>
                 
-                <div className="space-y-2">
+                <div className="space-y-2 animate-fade-in animation-delay-1000">
                   <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
@@ -88,11 +88,11 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="your.email@company.com"
-                    className="transition-all duration-300 focus:shadow-soft"
+                    className="transition-all duration-300 focus:shadow-soft hover:scale-[1.01]"
                   />
                 </div>
                 
-                <div className="space-y-2">
+                <div className="space-y-2 animate-fade-in animation-delay-1200">
                   <Label htmlFor="message">Message</Label>
                   <Textarea
                     id="message"
@@ -101,13 +101,13 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Tell us about your project requirements..."
                     rows={5}
-                    className="resize-none transition-all duration-300 focus:shadow-soft"
+                    className="resize-none transition-all duration-300 focus:shadow-soft hover:scale-[1.01]"
                   />
                 </div>
                 
                 <Button
                   type="submit"
-                  className="w-full gradient-primary text-white font-semibold py-3 shadow-glow hover:shadow-card transition-all duration-300 hover:scale-[1.02]"
+                  className="w-full gradient-primary text-white font-semibold py-3 shadow-glow hover:shadow-card transition-all duration-300 hover:scale-[1.02] animate-scale-in animation-delay-1400"
                 >
                   Send Message
                 </Button>

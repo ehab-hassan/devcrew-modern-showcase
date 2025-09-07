@@ -36,14 +36,14 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group cursor-pointer transition-all duration-300 hover:shadow-card hover:-translate-y-2 shadow-soft border-border/50 animate-slide-up"
-              style={{ animationDelay: `${(index + 1) * 200}ms` }}
+              className="group cursor-pointer transition-all duration-500 hover:shadow-card hover:-translate-y-3 hover:scale-[1.02] shadow-soft border-border/50 animate-slide-up"
+              style={{ animationDelay: `${(index + 1) * 300}ms` }}
             >
               <CardHeader className="text-center">
-                <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="flex justify-center mb-4 group-hover:scale-125 transition-transform duration-500">
                   {service.icon}
                 </div>
-                <CardTitle className="text-xl font-semibold group-hover:text-primary transition-colors">
+                <CardTitle className="text-xl font-semibold group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
