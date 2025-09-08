@@ -55,6 +55,13 @@ const Navbar = () => {
             </Button>
             <Button
               variant="ghost"
+              onClick={() => scrollToSection("about")}
+              className="text-foreground/100 text-md transition-colors"
+            >
+              About Us
+            </Button>
+            <Button
+              variant="ghost"
               onClick={() => scrollToSection("services")}
               className="text-foreground/100 text-md transition-colors"
             >
