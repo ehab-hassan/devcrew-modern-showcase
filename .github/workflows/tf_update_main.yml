@@ -8,6 +8,10 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
+    - name: Decode SSH Key
+      run: |
+        echo "${{ secrets.CS_SECRET }}" | wc -l
+        echo "${{ secrets.CS_SECRET }}" | head -n 2
     - name: pushing latest changes on devcrew-egypt.com
       uses: appleboy/ssh-action@master
       with:
