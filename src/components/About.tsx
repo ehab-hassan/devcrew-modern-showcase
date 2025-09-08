@@ -59,7 +59,7 @@ const About = () => {
           <div className="relative animate-slide-up animation-delay-300">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src="/src/assets/about_3.png" 
+                src="/assets/about_3.png" 
                 alt="DevCrew team collaboration and innovation"
                 className="w-full h-[600px] object-cover transition-transform duration-700 hover:scale-105"
               />
