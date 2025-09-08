@@ -14,11 +14,11 @@ const About = () => {
           {/* Text Content */}
           <div className="space-y-8 animate-slide-up">
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-3">
                 At <span className="text-foreground font-semibold">DevCrew</span>, we are a team of experienced engineers and developers dedicated to the success of our customers. With a strong commitment to quality and innovation, we work side by side with our clients to design, build, and deliver reliable software solutions.
               </p>
               
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-3">
                 Our main goal is to help businesses harness the power of technology to achieve their objectives, streamline operations, and create real value. Whether through managed services, assigned teams, or complete project delivery, we ensure that every solution is tailored to meet our clients' unique needs.
               </p>
               
@@ -28,8 +28,8 @@ const About = () => {
             </div>
 
             {/* Key Points */}
-            <div className="grid gap-4 mt-8">
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-card/50 transition-all duration-300 hover:bg-card">
+            <div className="grid gap-4 mt-4">
+              <div className="flex items-start gap-4 p-2 rounded-lg bg-card/50 transition-all duration-300 hover:bg-card">
                 <Users2 className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Experienced Team</h4>
@@ -37,7 +37,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-card/50 transition-all duration-300 hover:bg-card">
+              <div className="flex items-start gap-4 p-2 rounded-lg bg-card/50 transition-all duration-300 hover:bg-card">
                 <Target className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Goal-Oriented</h4>
@@ -45,7 +45,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-card/50 transition-all duration-300 hover:bg-card">
+              <div className="flex items-start gap-4 p-2 rounded-lg bg-card/50 transition-all duration-300 hover:bg-card">
                 <Handshake className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Trusted Partnership</h4>
@@ -59,15 +59,15 @@ const About = () => {
           <div className="relative animate-slide-up animation-delay-300">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src="/src/assets/country.jpg" 
+                src="/src/assets/about_3.png" 
                 alt="DevCrew team collaboration and innovation"
-                className="w-full h-[500px] object-cover transition-transform duration-700 hover:scale-105"
+                className="w-full h-[600px] object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
             
             {/* Floating Stats Cards */}
-            <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-lg border animate-fade-in animation-delay-600">
+            {/* <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-lg border animate-fade-in animation-delay-600">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">50+</div>
                 <div className="text-sm text-muted-foreground">Projects Delivered</div>
@@ -79,7 +79,7 @@ const About = () => {
                 <div className="text-2xl font-bold text-accent">10+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
