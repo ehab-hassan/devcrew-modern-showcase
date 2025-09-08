@@ -1,0 +1,24 @@
+name: devcrew-egypt.com
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: pushing latest changes on devcrew-egypt.com
+      uses: appleboy/ssh-action@master
+      with:
+        host: devcrew-egypt.com
+        username: ${{ secrets.CS_USER }}
+        key: ${{ secrets.CS_SECRET }}
+        port: ${{ secrets.CS_PORT }}
+        script: |
+          cd /websites/devcrew-modern-showcase/
+          git log -1
+          git fetch
+          git reset --hard origin/main
+          npm install
+          npm run build
