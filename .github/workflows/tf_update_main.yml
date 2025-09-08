@@ -20,7 +20,7 @@ jobs:
         key: ${{ secrets.CS_SECRET }}
         port: ${{ secrets.CS_PORT }}
         script: |
-          cd /websites/devcrew-modern-showcase/
+          cd websites/devcrew-modern-showcase/
           git log -1
           git fetch
           git reset --hard origin/main
