@@ -39,7 +39,7 @@ const Hero = () => {
               DevCrew
             </span>
           </h1>
-          <p className="text-md">We turn technology into growth for your business.</p>
+          <p className="text-md capitalize">We turn technology into growth for your business.</p>
           </div>
           <p className="text-xl md:text-2xl text-white capitalize mb-8 max-w-2xl mx-auto animate-slide-up animation-delay-200">
             Your trusted outsourcing partner for world-class software development.
