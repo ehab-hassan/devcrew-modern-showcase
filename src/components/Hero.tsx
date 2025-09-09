@@ -33,13 +33,14 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-         
-          <h1 className="text-5xl md:text-8xl font-bold mb-6 animate-fade-in">
+          <div className="mb-8">
+          <h1 className="text-5xl md:text-8xl font-bold mb-2 animate-fade-in">
             <span className="bg-clip-text">
               DevCrew
             </span>
           </h1>
-          
+          <p className="text-md">We turn technology into growth for your business.</p>
+          </div>
           <p className="text-xl md:text-2xl text-white capitalize mb-8 max-w-2xl mx-auto animate-slide-up animation-delay-200">
             Your trusted outsourcing partner for world-class software development.
           </p>
