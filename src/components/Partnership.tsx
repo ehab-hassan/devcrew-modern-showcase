@@ -4,7 +4,7 @@ const Partnership = () => {
   return (
     <section id="Partnership" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6 text-center">
-        <div className="flex flex-col md:flex-row justify-center item-center text-center">
+        <div className="flex flex-col md:flex-row justify-center items-center text-center">
           <h2 className="text-4xl md:text-5xl font-bold animate-fade-in">
             Partnership <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> With </span>
           </h2>
