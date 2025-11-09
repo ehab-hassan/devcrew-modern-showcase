@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,9 +13,10 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic form validation
@@ -27,14 +29,40 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'your-email@example.com', // Replace with your recipient email
+      };
+
+      await emailjs.send(
+        'service_e6wcm5j', // EmailJS Service ID
+        'template_87rm7oe', // EmailJS Template ID
+        templateParams,
+        'qpFF9gnI86Ufa6ZlM' // EmailJS Public Key
+      );
+
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -107,9 +135,10 @@ const Contact = () => {
                 
                 <Button
                   type="submit"
-                  className="w-full gradient-primary text-white font-semibold py-3 shadow-glow hover:shadow-card transition-all duration-300 hover:scale-[1.02] animate-scale-in animation-delay-1400"
+                  disabled={isSubmitting}
+                  className="w-full gradient-primary text-white font-semibold py-3 shadow-glow hover:shadow-card transition-all duration-300 hover:scale-[1.02] animate-scale-in animation-delay-1400 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+// import Gasp from "@/components/Gasp";
 import Services from "@/components/Services";
 import Values from "@/components/Values";
 import Partnership from "@/components/Partnership";
