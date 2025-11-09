@@ -36,7 +36,6 @@ const Contact = () => {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: 'your-email@example.com', // Replace with your recipient email
       };
 
       await emailjs.send(
@@ -53,11 +52,22 @@ const Contact = () => {
       
       // Reset form
       setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
+    } catch (error: any) {
       console.error('Email sending failed:', error);
+      
+      // Extract error message from EmailJS response
+      const errorMessage = error?.text || error?.message || 'Unknown error occurred';
+      const errorStatus = error?.status || 'Unknown status';
+      
+      console.error('Error details:', {
+        status: errorStatus,
+        text: errorMessage,
+        fullError: error
+      });
+      
       toast({
         title: "Failed to send message",
-        description: "Please try again later or contact us directly.",
+        description: errorMessage || "Please check your EmailJS configuration and try again.",
         variant: "destructive"
       });
     } finally {
